@@ -1,3 +1,105 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h2>Cart</h2>
+  </div>
+</div>
+
+
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency }}</span>
+</div>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+
+  <div class="box-body">
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-1">
+          <label for="inputText" class="col-sm-2 control-label">FullName</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="text" class="form-control" id="inputText" placeholder="Full Name">
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-1">
+          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-1">
+          <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        </div>
+        <div class="col-sm-4">
+          <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-1">
+          <b>Delivery Address: </b>
+        </div>
+        <div class="col-sm-4">
+          <textarea class="drag">To resize: Click and drag the bottom right corner of this Text box.</textarea>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div>
+        </div>
+
+      <div class="col"> <div class="col-sm-4">
+          <button class="button" type="submit" routerLink="/shipping">>> Shipping Prices</button>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+
+  
+     
+  
+    <div class="row">
+    <div class="col-sm-4">
+      <div class="box-footer">
+        <button class="btn btn-success" type="submit">Proceed to Pay</button>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+</form>
+
+
+<!-- <hr>
+
 <h3>Cart</h3>
 
 <p>
@@ -11,7 +113,7 @@
 
 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
  
-  <div>
+  <!-- <div>
     <label>Name: </label>
     <input type="text" formControlName="name">
   </div>
@@ -23,4 +125,4 @@
  
   <button class="button" type="submit">Purchase</button>
   
-</form>
+</form> -->

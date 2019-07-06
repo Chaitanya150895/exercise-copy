@@ -1,24 +1,41 @@
-<div class="small-box bg-yellow">
-  <div class="inner">
-    <h2>Product Details</h2>
+<h2>Product Details</h2>
 
-    <div *ngIf="product">
-      <h3>{{ product.name }}</h3>
-      <h4>{{ product.price | currency }}</h4>
-      <p>{{ product.description }}</p>
-    </div>
+<div class="box-body box-profile">
+    <img class="profile-user-img img-responsive img-circle" src="https://static.toiimg.com/thumb/msid-65625284,width-220,resizemode-4/Apple-iPhone-XS.jpg" alt="User profile picture">
+
+    <div *ngIf="product"></div>
+    <h3 class="profile-username text-center">{{ product.name }}</h3>
+
+    <p class="text-muted text-center">{{ product.description }}</p>
+
+    <ul class="list-group list-group-unbordered">
+      <li class="list-group-item">
+        <b>Price</b> <a class="pull-right">{{ product.price | currency }}</a>
+      </li>
+      <li class="list-group-item">
+        <b>Performance</b> <a class="pull-right">Hexa Core</a>
+      </li>
+      <li class="list-group-item">
+        <b>Display</b> <a class="pull-right">5.8" (14.73 cm)</a>
+      </li>
+      <li class="list-group-item">
+          <b>Storage</b> <a class="pull-right">64 GB</a>
+        </li>
+        <li class="list-group-item">
+            <b>Camera</b> <a class="pull-right">12 MP + 12 MP</a>
+          </li>
+          <li class="list-group-item">
+              <b>Battery</b> <a class="pull-right">2658 mAh</a>
+            </li>
+    </ul>
+
+    <a (click)="addToCart(product)" class="btn btn-primary btn-block"><b>BUY</b></a>
   </div>
 
-
-  <button class="small-box-footer" (click)="addToCart(product)">Add to Cart <i class="fa fa-opencart"></i></button>
-
-</div>
+<!-- <hr>
 
 
-<hr>
-
-
-<!-- <h2>Product Details</h2>
+<h2>Product Details</h2>
 
 <div *ngIf="product">
   <h3>{{ product.name }}</h3>
