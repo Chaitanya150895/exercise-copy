@@ -1,0 +1,11 @@
+.small-box>.small-box-footer {
+    position: relative;
+    text-align: center;
+    padding: 3px 0;
+    color: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    z-index: 10;
+    background: rgba(220, 249, 69, 0.37);
+    text-decoration: none;
+}

@@ -40,5 +40,35 @@
 </div>
 
 <hr>
+<!-- 
 
+
+
+
+  <div *ngFor="let product of products; index as productId">
+
+   <h3> <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+      {{ product.name }}
+    </a></h3>
+
+    <p *ngIf="product.description">
+      Description: {{ product.description }}
+    </p>
+
+    <button class="btn btn-primary" (click)="share()">
+      Share
+    </button>
+    <br>
+
+    <app-product-alerts 
+    [product]="product"
+    (notify)="onNotify()">
+    </app-product-alerts>
+    <br>
+
+    
+
+  
+
+</div> -->
 <!-- *ngFor causes the <div> to be repeated for each product in the list. -->
