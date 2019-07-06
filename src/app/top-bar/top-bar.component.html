@@ -1,14 +1,46 @@
-<nav class="navbar navbar-static-top">
-  <div class="container">
-    <div class="navbar-header">
-      <span class="logo-lg"> <a [routerLink]="['/']"><b>Admin</b>LTE</a></span>
+<!-- <nav class="navbar navbar-static-top">
+  <div class="container" class="navbar-header">
+    <span class="logo-lg"> <a [routerLink]="['/']"><b>My</b>Store</a></span>
+
+    <span class="nav navbar-nav">
+      <a [routerLink]="['/cart']">
+        <button class="btn btn-danger navbar-btn">Checkout</button>
+      </a>
+
+    </span>
+  </div>
+</nav> -->
+
+<header class="main-header">
+  <!-- Logo -->
+  <a  class="logo" [routerLink]="['/']">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><b>M</b>S</span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg" ><b>My</b>Store</span>
+  </a>
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top">
+    <!-- Sidebar toggle button-->
+    <!-- <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a> -->
+
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
+        <!-- Messages: style can be found in dropdown.less-->
+        <li class="dropdown messages-menu">
+          <a [routerLink]="['/cart']" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-shopping-cart"></i>
+            <span class="label label-success">{{cartService.getItems().length}}</span>
+          </a>
+         
+        </li>
+        
+      
+        <!-- Control Sidebar Toggle Button -->
+       
+      </ul>
     </div>
-    
-
-    <ul class="nav navbar-nav navbar-right">
-      <li><a [routerLink]="['/cart']">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
-        </a></li>
-
-      <li><button class="btn btn-danger navbar-btn">Checkout</button></li>
-    </ul>
+  </nav>
+</header>
