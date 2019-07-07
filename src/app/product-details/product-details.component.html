@@ -1,10 +1,19 @@
 <h2>Product Details</h2>
 
-<div class="box-body box-profile">
-    <img class="profile-user-img img-responsive img-circle" src="https://static.toiimg.com/thumb/msid-65625284,width-220,resizemode-4/Apple-iPhone-XS.jpg" alt="User profile picture">
 
-    <div *ngIf="product"></div>
+<div class="row">
+  <div class="col-xs-3">
     <h3 class="profile-username text-center">{{ product.name }}</h3>
+    <div class="box-body box-profile">
+      <img 
+        src="https://static.toiimg.com/thumb/msid-65625284,width-220,resizemode-4/Apple-iPhone-XS.jpg"
+        width="180" alt="User profile picture">
+
+    </div>
+  </div>
+  <div class="col-xs-9">
+    <div *ngIf="product"></div>
+    
 
     <p class="text-muted text-center">{{ product.description }}</p>
 
@@ -19,18 +28,26 @@
         <b>Display</b> <a class="pull-right">5.8" (14.73 cm)</a>
       </li>
       <li class="list-group-item">
-          <b>Storage</b> <a class="pull-right">64 GB</a>
-        </li>
-        <li class="list-group-item">
-            <b>Camera</b> <a class="pull-right">12 MP + 12 MP</a>
-          </li>
-          <li class="list-group-item">
-              <b>Battery</b> <a class="pull-right">2658 mAh</a>
-            </li>
+        <b>Storage</b> <a class="pull-right">64 GB</a>
+      </li>
+      <li class="list-group-item">
+        <b>Camera</b> <a class="pull-right">12 MP + 12 MP</a>
+      </li>
+      <li class="list-group-item">
+        <b>Battery</b> <a class="pull-right">2658 mAh</a>
+      </li>
     </ul>
-
-    <a (click)="addToCart(product)" class="btn btn-primary btn-block"><b>BUY</b></a>
   </div>
+  <p class="text-muted text-center">
+    {{ product.description }}{{ product.description }}{{ product.description }}{{ product.description }}</p>
+
+  <p class="text-muted text-center">
+    {{ product.description }}{{ product.description }}{{ product.description }}{{ product.description }}{{ product.description }}{{ product.description }}{{ product.description }}{{ product.description }}{{ product.description }}
+  </p>
+
+
+  <a (click)="addToCart(product)" class="btn btn-primary btn-block"><b>BUY</b></a>
+</div>
 
 <!-- <hr>
 
