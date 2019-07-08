@@ -1,42 +1,14 @@
 <div class="row">
-  <div *ngIf = "item.lenth>0" class=" col-sm-12">
+  <div  class=" col-sm-12">
     <h2>Cart</h2>
   </div>
 </div>
 
-<hr>
-
-<div class="row">
-  <div class="col-xs-12  hidden-md  hidden-sm hidden-lg">
-
-    <p class="lead">Is there any item in Your Cart?</p>
-
-
-    <div class="table-responsive">
-      <table class="table">
-        <tbody>
-          <tr>
-            <div class="cart-item" *ngFor="let item of items">
-              <th style="width:50%">{{ item.name }}</th>
-              <td>{{ item.price | currency }}</td>
-            </div>
-          </tr>
-          <!-- <tr>
-            <th>Tax (9.3%)</th>
-            <td>$10.34</td>
-          </tr>
-          <tr>
-            <th>Shipping:</th>
-            <td>$5.80</td>
-          </tr>
-          <tr>
-            <th>Total:</th>
-            <td>$---.--</td>
-          </tr> -->
-        </tbody>
-      </table>
-    </div>
-  </div>
+<div  class="row">
+  <div  *ngIf="items.length>0" class="col-xs-12  hidden-md  hidden-sm hidden-lg">
+<app-total></app-total>
+    
+  </div> 
 </div>
 
 
@@ -143,32 +115,7 @@
   <div *ngIf="items.length>0" class="col-sm-4 hidden-xs">
 
 
-    <p class="lead">Is there any item in Your Cart?</p>
-
-    <div class="table-responsive">
-      <table class="table">
-        <tbody>
-          <tr>
-            <div class="cart-item" *ngFor="let item of items">
-              <th style="width:50%">{{ item.name }}</th>
-              <td>{{ item.price | currency }}</td>
-            </div>
-          </tr>
-          <!-- <tr>
-            <th>Tax (9.3%)</th>
-            <td>$10.34</td>
-          </tr>
-          <tr>
-            <th>Shipping:</th>
-            <td>$5.80</td>
-          </tr>
-          <tr>
-            <th>Total:</th>
-            <td>$---.--</td>
-          </tr> -->
-        </tbody>
-      </table>
-    </div>
+    <app-total></app-total>
 
   </div>
 </div>
@@ -219,3 +166,7 @@
   <button class="button" type="submit">Purchase</button>
   
 </form> -->
+
+
+
+

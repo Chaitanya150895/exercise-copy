@@ -1,0 +1,29 @@
+<p class="lead">Items in Your Cart</p>
+
+
+<div class="table-responsive">
+  <table class="table">
+    <tbody>
+      <tr>
+        <div class="cart-item" *ngFor="let item of cartService.getItems()"> 
+          <th style="width:50%">{{ item.name }}</th>
+          <td>{{ item.price | currency }}</td>
+        </div>
+        <b>Total:  {{cartService.getTotalPrice()|currency}}</b>
+      </tr>
+      <!-- <tr>
+        <th>Tax (9.3%)</th>
+        <td>$10.34</td>
+      </tr>
+      <tr>
+        <th>Shipping:</th>
+        <td>$5.80</td>
+      </tr>
+      <tr>
+        <th>Total:</th>
+        <td>$---.--</td>
+      </tr> -->
+    </tbody>
+  </table>
+</div>
+

@@ -20,6 +20,16 @@ export class CartService {
     return this.items;
   }
 
+
+
+  getTotalPrice() {
+    var totalPrice = 0;
+    for (const item of this.items) {
+      totalPrice += item.price;
+    }
+    return totalPrice;
+  }
+
   clearCart() {
     this.items = [];
     return this.items;
