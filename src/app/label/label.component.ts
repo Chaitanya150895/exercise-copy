@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
 
 
 @Component({
@@ -9,6 +9,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class LabelComponent implements OnInit {
 
+  @Input() controls: FormControl;
   constructor(private formBuilder: FormBuilder ) {
   }
 
