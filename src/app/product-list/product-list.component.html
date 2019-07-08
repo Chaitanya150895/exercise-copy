@@ -40,9 +40,12 @@
         <i class="ion ion-bag"></i>
       </div>
       <a [title]="product.name + ' details'" [routerLink]="['/products', productId]" class="small-box-footer">
-        More Info <i class="fa fa-arrow-circle-right"></i>
+        Learn More <i class="fa fa-arrow-circle-right"></i>
       </a>
-      <button class="btn btn-success" (click)="cartService.addToCart(product)">Buy</button>
+
+      <div style="text-align: center">
+      <button class="btn btn-success" (click)="cartService.addToCart(product)">Add to Cart</button>
+    </div>
 
     </div>
   </div>
