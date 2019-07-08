@@ -14,6 +14,8 @@ import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { TotalComponent } from './total/total.component';
 
+import { LabelComponent } from './label/label.component';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { TotalComponent } from './total/total.component';
     CartComponent,
     ShippingComponent,
     TotalComponent,
+    LabelComponent,
 
   ],
   imports: [
