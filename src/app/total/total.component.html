@@ -15,22 +15,22 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body table-responsive no-padding">
-      <table class="table table-hover" cellpadding = "10px">
+      <table class="table table-hover">
         <tbody><tr>
-          <th style="width:50%">Product</th>
+          <th >Product</th>
           <th>Price</th>
           
         </tr>
-        <tr>
-          <div class="cart-item" *ngFor="let item of cartService.getItems()">
+        <tr class="cart-item" *ngFor="let item of cartService.getItems()">
+          <!-- <div class="cart-item" *ngFor="let item of cartService.getItems()"> -->
 
             <td>{{ item.name }}</td>
             <td><span class="label label-success">{{ item.price | currency }}</span></td>
-          </div>
+          <!-- </div> -->
         </tr>
         <tr>
          
-          <td>Total</td>
+          <td><b>Total</b></td>
           <td><span class="label label-info">{{cartService.getTotalPrice()|currency}}</span></td>
         </tr>
         

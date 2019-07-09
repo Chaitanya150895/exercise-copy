@@ -13,7 +13,7 @@
 
         <p>   {{ product.description }}</p> 
 
-        <img class="profile-user-img img-responsive img-circle" src="{{product.image}}" alt="User profile picture">
+        <img [routerLink]="['/products', productId]" class="profile-user-img img-responsive img-circle" src="{{product.image}}" alt="User profile picture">
 
       </div>
 
@@ -39,9 +39,7 @@
       <div class="icon">
         <i class="ion ion-bag"></i>
       </div>
-      <a [title]="product.name + ' details'" [routerLink]="['/products', productId]" class="small-box-footer">
-        Learn More <i class="fa fa-arrow-circle-right"></i>
-      </a>
+      
 
       <div style="text-align: center">
       <button class="btn btn-success" (click)="cartService.addToCart(product)">Add to Cart</button>
