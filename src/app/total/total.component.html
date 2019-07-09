@@ -28,11 +28,15 @@
             <td><span class="label label-success">{{ item.price | currency }}</span></td>
           <!-- </div> -->
         </tr>
+        
         <tr>
          
-          <td><b>Total</b></td>
-          <td><span class="label label-info">{{cartService.getTotalPrice()|currency}}</span></td>
-        </tr>
+            <td><b>SubTotal</b></td>
+            <td><span class="label label-info">{{cartService.getTotalPrice() |currency}}</span></td>
+           
+          </tr>
+
+               
         
       </tbody></table>
     </div>

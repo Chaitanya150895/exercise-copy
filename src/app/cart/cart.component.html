@@ -23,7 +23,7 @@
       <div class="box">
           <div class="box-header">
             
-    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm)">
 
       <div class="box-body">
 
@@ -33,7 +33,7 @@
               <label for="inputText" class="col-sm-2 control-label">FullName</label>
             </div>
             <div class="col-sm-6">
-              <input  type="text" class="form-control" id="inputText" placeholder="Full Name">
+              <input formControlName="name" type="text" class="form-control" id="inputText" placeholder="Full Name">
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
               <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
             </div>
             <div class="col-sm-6">
-              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              <input formControlName="email" type="email" class="form-control" id="inputEmail3" placeholder="Email">
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@
               <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
             </div>
             <div class="col-sm-6">
-              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+              <input formControlName="password" type="password" class="form-control" id="inputPassword3" placeholder="Password">
             </div>
           </div>
         </div>
@@ -88,21 +88,27 @@
 
             <div class="col">
               <div class="col-sm-6">
-                <button class="button" type="submit" routerLink="/shipping">>> Shipping Prices</button>
+                <div class="form-group">
+                  <label class="fa fa-truck" > Select any of the below shipping method</label>
+                  <select class="form-control select2 select2-hidden-accessible " 
+                  style="width: 100%;" 
+                  tabindex="-1" 
+                  aria-hidden="true"
+                  formControlName="shipping_value" >
+                    <option selected="selected">Overnight - $ 25.99</option>
+                    <option value="1.2">Two Days - $ 9.99</option>
+                    <option>Postal - $ 2.99</option>
+                  {{shipping_price}}
+                  </select>
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-
-
-
-
-
         <div class="row">
           <div class="col-sm-12">
             <div class="box-footer">
-              <button class="btn btn-success" type="submit">Proceed to Pay</button>
+              <button class="btn btn-success"  type="submit">Proceed to Pay</button>
             </div>
           </div>
         </div>
@@ -113,19 +119,16 @@
 
 </div>
   </div>
-
-
-
-
-  <div *ngIf="items.length>0" class="col-sm-5 hidden-xs">
-
-
-    <app-total></app-total>
-
-  </div>
+<div *ngIf="items.length>0" class="col-sm-5 hidden-xs">
+<app-total></app-total>
+</div>
 </div>
 
 
+
+<!-- <div>
+  <app-demo></app-demo>
+</div> -->
 
 
 

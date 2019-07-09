@@ -30,6 +30,15 @@ export class CartService {
     return totalPrice;
   }
 
+
+  // getFinalPrice() {
+  //   var tax = 12.5;
+  //   var finalPrice = 0;
+  //   finalPrice = this.getTotalPrice + this.getTax;
+  //   return finalPrice;
+    
+  // }
+
   clearCart() {
     this.items = [];
     return this.items;
