@@ -8,6 +8,14 @@ import { HttpClient } from '@angular/common/http';
 export class CartService {
   items = [];
 
+  customer = {
+    name: '',
+    email: '',
+    password: '',
+    address: '',
+    shipping_value: ['']
+  }
+
   constructor(
     private http: HttpClient
   ) {}

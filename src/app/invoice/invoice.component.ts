@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-invoice',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class InvoiceComponent implements OnInit {
 
   today: number = Date.now();
-  constructor() {
+  constructor(private cartService: CartService) {
 
     setInterval(() => {
       this.today = Date.now();

@@ -23,7 +23,7 @@ export class CartComponent implements OnInit {
       address: '',
       email: '',
       password: '',
-      shipping_value: ''
+      shipping_value: ['']
     });
   }
 
@@ -31,7 +31,16 @@ export class CartComponent implements OnInit {
   }
 
   onSubmit(customerData) {
-    console.log(this.checkoutForm.controls['shipping_value']);
+    this.cartService.customer.name = this.checkoutForm.value.name;
+    this.cartService.customer.email = this.checkoutForm.value.email;
+    this.cartService.customer.password = this.checkoutForm.value.password;
+    this.cartService.customer.address = this.checkoutForm.value.address;
+    this.cartService.customer.shipping_value = this.checkoutForm.value.shipping_value;
+
+    console.log(this.checkoutForm.value);
+    console.log(this.checkoutForm.value.name);
+    console.log(this.cartService.customer.name);
+   // this.cartService.customer.name = this.checkoutForm.name;
     // Process checkout data here
    // console.warn('Your order has been submitted', customerData);
   //  this.items = this.cartService.clearCart();

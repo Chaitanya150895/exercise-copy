@@ -13,7 +13,8 @@ export class DemoComponent {
 
   constructor(private formBuilder: FormBuilder) {
     this.form = this.formBuilder.group({
-      orders: ['']
+      orders: [''],
+      name: ''
     });
 
     // async orders
