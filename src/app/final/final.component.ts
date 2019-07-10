@@ -11,6 +11,11 @@ export class FinalComponent implements OnInit {
   constructor(private cartService: CartService) { }
 
   ngOnInit() {
+    console.log("ashis-->" + this.cartService.customer.shipping_value);
+  }
+
+  getCalculatedValue() {
+    return this.cartService.getTotalPrice() + 12.5 + +this.cartService.customer.shipping_value ;
   }
 
 }

@@ -14,7 +14,7 @@ export class CartService {
     password: '',
     address: '',
     checkbox: '',
-    shipping_value: ['']
+    shipping_value: ''
   }
 
   constructor(
