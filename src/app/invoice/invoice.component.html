@@ -1,10 +1,10 @@
 <section class="invoice">
     <!-- title row -->
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-12">
         <h2 class="page-header">
           <i class="fa fa-globe"></i> MyStore
-          <small class="pull-right">Date: 2/10/2014</small>
+          <small class="pull-right">{{myDate | date:'yyyy-MM-dd'}}</small>
         </h2>
       </div>
       <!-- /.col -->
@@ -13,7 +13,7 @@
    
     <!-- Table row -->
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-sm-12">
         <app-total></app-total>
       </div>
       <!-- /.col -->
@@ -22,7 +22,7 @@
 
     <div class="row">
       <!-- accepted payments column -->
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <p class="lead">Payment Methods:</p>
         <img src="https://adminlte.io/themes/AdminLTE/dist/img/credit/visa.png" alt="Visa">
         <img src="https://adminlte.io/themes/AdminLTE/dist/img/credit/mastercard.png" alt="Mastercard">
@@ -35,7 +35,7 @@
         </p>
       </div>
       <!-- /.col -->
-      <div class="col-xs-6">
+      <div class="col-sm-6">
         <p class="lead">Amount Due 2/22/2014</p>
 
         <div class="table-responsive">
@@ -60,7 +60,7 @@
 
     <!-- this row will not appear when printing -->
     <div class="row no-print">
-      <div class="col-xs-12">
+      <div class="col-sm-12">
         <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
         <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
         </button>
