@@ -13,6 +13,7 @@ export class CartService {
     email: '',
     password: '',
     address: '',
+    checkbox: '',
     shipping_value: ['']
   }
 

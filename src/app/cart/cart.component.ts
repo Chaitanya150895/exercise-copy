@@ -23,6 +23,7 @@ export class CartComponent implements OnInit {
       address: '',
       email: '',
       password: '',
+      checkbox: '',
       shipping_value: ['']
     });
   }
@@ -36,6 +37,7 @@ export class CartComponent implements OnInit {
     this.cartService.customer.password = this.checkoutForm.value.password;
     this.cartService.customer.address = this.checkoutForm.value.address;
     this.cartService.customer.shipping_value = this.checkoutForm.value.shipping_value;
+    this.cartService.customer.checkbox = this.checkoutForm.value.checkbox;
 
     console.log(this.checkoutForm.value);
     console.log(this.checkoutForm.value.name);
