@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InvoiceComponent implements OnInit {
 
-  constructor() { }
+  today: number = Date.now();
+  constructor() {
+
+    setInterval(() => {
+      this.today = Date.now();
+    }, 1000);
+   }
 
   ngOnInit() {
   }

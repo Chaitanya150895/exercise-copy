@@ -34,7 +34,7 @@ export class CartComponent implements OnInit {
     console.log(this.checkoutForm.controls['shipping_value']);
     // Process checkout data here
    // console.warn('Your order has been submitted', customerData);
-    this.items = this.cartService.clearCart();
+  //  this.items = this.cartService.clearCart();
    // this.checkoutForm.reset();
     this.router.navigateByUrl('/invoice');
   }
