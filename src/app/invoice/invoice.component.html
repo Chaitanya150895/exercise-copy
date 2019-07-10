@@ -65,21 +65,14 @@
       </div>
       <!-- /.col -->
       <div class="col-sm-6">
-        <p class="lead">Amount Due 2/22/2014</p>
+        <p class="lead">Amount Due on  {{today | date:'yyyy-MM-dd'}}</p>
 
         <div class="table-responsive">
           <table class="table">
             <tbody><tr>
                 <app-final></app-final>
             </tr>
-            <tr>
-              <th>Shipping:</th>
-              <td>$5.80</td>
-            </tr>
-            <tr>
-              <th>Total:</th>
-              <td>$265.24</td>
-            </tr>
+            
           </tbody></table>
         </div>
       </div>
@@ -100,9 +93,9 @@
     </div>
   </section>
 
-Name: {{this.cartService.customer.name}} <br>
-<!-- Password: {{this.cartService.customer.password}}<br> -->
+<!-- Name: {{this.cartService.customer.name}} <br>
+Password: {{this.cartService.customer.password}}<br>
 Email: {{this.cartService.customer.email }}<br>
 Address: {{this.cartService.customer.address}}<br>
-<!-- Checkbox: {{this.cartService.customer.checkbox}}<br> -->
-Shipping Charges: {{this.cartService.customer.shipping_value}}
+Checkbox: {{this.cartService.customer.checkbox}}<br>
+Shipping Charges: {{this.cartService.customer.shipping_value}} -->

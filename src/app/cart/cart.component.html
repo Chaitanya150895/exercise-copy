@@ -19,9 +19,7 @@
           <div class="box-header">
             
     <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm)">
-
       <div class="box-body">
-
         <div class="form-group">
           <div class="row">
             <div class="col-sm-2">
@@ -103,13 +101,13 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="box-footer">
-              <button class="btn btn-success"  type="submit">Proceed to Pay</button>
+              <button class="btn btn-success"  type="submit" [disabled]="!myForm.form.valid">Proceed to Pay</button>
             </div>
           </div>
         </div>
       </div>
 
-    </form>
+    </form> 
   </div>
 
 </div>
@@ -172,4 +170,6 @@
 
 
 
-
+<div>
+    <app-disabled></app-disabled>
+</div>

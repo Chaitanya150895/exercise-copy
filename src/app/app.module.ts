@@ -18,6 +18,7 @@ import { LabelComponent } from './label/label.component';
 import { DemoComponent } from './demo/demo.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { FinalComponent } from './final/final.component';
+import { DisabledComponent } from './disabled/disabled.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { FinalComponent } from './final/final.component';
     DemoComponent,
     InvoiceComponent,
     FinalComponent,
+    DisabledComponent,
 
   ],
   imports: [
