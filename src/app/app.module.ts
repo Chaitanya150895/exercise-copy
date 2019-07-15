@@ -12,7 +12,8 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,8 @@ import { ShippingComponent } from './shipping/shipping.component';
 
   ],
   imports: [
+    BrowserAnimationsModule,
+    MatButtonModule, MatCheckboxModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
@@ -38,6 +41,9 @@ import { ShippingComponent } from './shipping/shipping.component';
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [MatButtonModule, MatCheckboxModule]
 })
 export class AppModule { }
+export class PizzaPartyAppModule { }
+export class MyOwnCustomMaterialModule { }
