@@ -13,7 +13,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatRippleModule, MatInputModule, MatFormFieldModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -29,21 +29,26 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
   imports: [
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent }, //if there is nothing to show it;ll show this (the homepage-product list)
-      { path: 'products/:productId', component: ProductDetailsComponent }, //it'll show this if clicked
+      { path: '', component: ProductListComponent }, // if there is nothing to show it;ll show this (the homepage-product list)
+      { path: 'products/:productId', component: ProductDetailsComponent }, // it'll show this if clicked
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
     ])
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [MatButtonModule, MatCheckboxModule]
+  exports: [MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule]
 })
 export class AppModule { }
-export class PizzaPartyAppModule { }
-export class MyOwnCustomMaterialModule { }
+
