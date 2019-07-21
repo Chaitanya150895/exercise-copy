@@ -1,28 +1,38 @@
 <div class="container">
   <h2>Products</h2>
 
-  <div *ngFor="let product of products; index as productId">
+  <div style="background-color: antiquewhite" *ngFor="let product of products; index as productId">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"><img src="{{product.image}}"></div>
+      </mat-card-header>
 
-   <h4> <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
-      {{ product.name }}
-    </a></h4>
+      <mat-card-title>
+        <h4> <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+            {{ product.name }}
+          </a></h4>
+      </mat-card-title>
 
-    <p *ngIf="product.description">
-      Description: {{ product.description }}
-    </p>
 
-    <button mat-raised-button color="primary" (click)="share()">
-      Share
-    </button>
-    <br><br>
 
-    <app-product-alerts 
-    [product]="product"
-    (notify)="onNotify()">
-    </app-product-alerts>
-    <br>
+      <mat-card-content>
+        <p *ngIf="product.description">
+          Description: {{ product.description }}
+        </p>
+      </mat-card-content>
+      <!-- <img mat-card-image src="{{product.image}}" alt="User profile picture"> -->
 
+      <button mat-raised-button color="primary" (click)="share()">
+        Share
+      </button>
+      <br><br>
+
+      <app-product-alerts [product]="product" (notify)="onNotify()">
+      </app-product-alerts>
+      <br>
+    </mat-card>
 
   </div>
+
 </div>
 <!-- *ngFor causes the <div> to be repeated for each product in the list. -->
