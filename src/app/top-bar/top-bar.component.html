@@ -7,7 +7,5 @@
 
     <ul class="nav navbar-nav navbar-right">
       <li><a [routerLink]="['/cart']">
-          <span class="label label-success"><i class="material-icons">shopping_cart</i>{{cartService.getItems().length}}</span></a></li>
-
-      <!-- <li><button class="btn btn-danger navbar-btn">Checkout</button></li> -->
-    </ul>
+        <span matBadge="{{cartService.getItems().length}}" matBadgeOverlap="false"><i class="material-icons">shopping_cart</i></span>
+   </a></li></ul>

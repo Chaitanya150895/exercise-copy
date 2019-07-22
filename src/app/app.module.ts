@@ -15,6 +15,8 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatRippleModule, MatInputModule, MatFormFieldModule} from '@angular/material';
 import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import {MatCardModule} from '@angular/material/card';
     AppRoutingModule,
     ReactiveFormsModule,
     MatCardModule,
+    MatGridListModule,
+    MatBadgeModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent }, // if there is nothing to show it;ll show this (the homepage-product list)
       { path: 'products/:productId', component: ProductDetailsComponent }, // it'll show this if clicked

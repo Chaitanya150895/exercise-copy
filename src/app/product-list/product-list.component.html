@@ -12,9 +12,11 @@
           </a></h4>
       </mat-card-title>
 
-     <span> <mat-card-header style="justify-content: center;">
-        <div mat-card-avatar class="example-header-image" [routerLink]="['/products', productId]" [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
-      </mat-card-header>
+      <span>
+        <mat-card-header style="justify-content: center;">
+          <div mat-card-avatar class="example-header-image" [routerLink]="['/products', productId]"
+            [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
+        </mat-card-header>
       </span>
 
       <mat-card-content>
@@ -24,19 +26,25 @@
       </mat-card-content>
       <!-- <img mat-card-image src="{{product.image}}" alt="User profile picture"> -->
 
-      <div>
-        <span>
+      <mat-grid-list cols="3" rowHeight="3:1">
+
+        <mat-grid-tile>
           <button mat-raised-button color="primary" (click)="share()">
             Share
           </button>
+        </mat-grid-tile>
 
+        <mat-grid-tile>
+          <button mat-raised-button color="accent" (click)="cartService.addToCart(product)">Add
+            to Cart</button>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
           <app-product-alerts [product]="product" (notify)="onNotify()">
           </app-product-alerts>
+        </mat-grid-tile>
 
-          <button mat-raised-button color="primary" class="btn btn-success" (click)="cartService.addToCart(product)">Add
-            to Cart</button>
-        </span>
-      </div>
+      </mat-grid-list>
 
     </mat-card>
     <br>
