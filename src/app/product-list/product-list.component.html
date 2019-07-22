@@ -1,11 +1,8 @@
-<div class="container">
+<div class="container" style="text-align: center">
   <h2>Products</h2>
 
   <div style="background-color: antiquewhite" *ngFor="let product of products; index as productId">
     <mat-card class="example-card">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"><img src="{{product.image}}"></div>
-      </mat-card-header>
 
       <mat-card-title>
         <h4> <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
@@ -13,7 +10,10 @@
           </a></h4>
       </mat-card-title>
 
-
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image" [routerLink]="['/products', productId]"
+          [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
+      </mat-card-header>
 
       <mat-card-content>
         <p *ngIf="product.description">
