@@ -1,7 +1,9 @@
 <div class="container" style="text-align: center">
+  <br>
   <h2>Products</h2>
+  <br>
 
-  <div style="background-color: antiquewhite" *ngFor="let product of products; index as productId">
+  <div *ngFor="let product of products; index as productId">
     <mat-card class="example-card">
 
       <mat-card-title>
@@ -10,10 +12,10 @@
           </a></h4>
       </mat-card-title>
 
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image" [routerLink]="['/products', productId]"
-          [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
+     <span> <mat-card-header style="justify-content: center;">
+        <div mat-card-avatar class="example-header-image" [routerLink]="['/products', productId]" [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
       </mat-card-header>
+      </span>
 
       <mat-card-content>
         <p *ngIf="product.description">
@@ -22,17 +24,22 @@
       </mat-card-content>
       <!-- <img mat-card-image src="{{product.image}}" alt="User profile picture"> -->
 
-      <button mat-raised-button color="primary" (click)="share()">
-        Share
-      </button>
-      <br><br>
+      <div>
+        <span>
+          <button mat-raised-button color="primary" (click)="share()">
+            Share
+          </button>
 
-      <app-product-alerts [product]="product" (notify)="onNotify()">
-      </app-product-alerts>
-      <br>
+          <app-product-alerts [product]="product" (notify)="onNotify()">
+          </app-product-alerts>
+
+          <button mat-raised-button color="primary" class="btn btn-success" (click)="cartService.addToCart(product)">Add
+            to Cart</button>
+        </span>
+      </div>
+
     </mat-card>
-
+    <br>
   </div>
-
 </div>
 <!-- *ngFor causes the <div> to be repeated for each product in the list. -->

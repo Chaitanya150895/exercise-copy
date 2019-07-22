@@ -8,6 +8,15 @@ import { HttpClient } from '@angular/common/http';
 export class CartService {
   items = [];
 
+  customer = {
+    name: '',
+    email: '',
+    password: '',
+    address: '',
+    checkbox: '',
+    shipping_value: ''
+  }
+
   constructor(
     private http: HttpClient
   ) {}
@@ -19,6 +28,25 @@ export class CartService {
   getItems() {
     return this.items;
   }
+
+
+
+  getTotalPrice() {
+    var totalPrice = 0;
+    for (const item of this.items) {
+      totalPrice += item.price;
+    }
+    return totalPrice;
+  }
+
+
+  // getFinalPrice() {
+  //   var tax = 12.5;
+  //   var finalPrice = 0;
+  //   finalPrice = this.getTotalPrice + this.getTax;
+  //   return finalPrice;
+    
+  // }
 
   clearCart() {
     this.items = [];

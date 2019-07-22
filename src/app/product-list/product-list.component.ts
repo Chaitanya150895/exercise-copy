@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { products } from '../products';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,6 +10,8 @@ import { products } from '../products';
 })
 export class ProductListComponent {
   products = products;
+  
+  constructor(private cartService:CartService){}
 
   share() {
     window.alert('The product has been shared!');
