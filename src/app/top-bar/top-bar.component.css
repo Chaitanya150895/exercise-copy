@@ -8,6 +8,11 @@ a {
     font-size: 30px;
 }
 
+.example-card {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+  
+  
+
 .navbar {
     z-index: 1;
     background-color: rgb(214, 133, 255);
