@@ -17,6 +17,10 @@ import {MatButtonModule, MatCheckboxModule, MatRippleModule, MatInputModule, Mat
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatBadgeModule} from '@angular/material/badge';
+import { TotalComponent } from './total/total.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { FinalComponent } from './final/final.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +31,9 @@ import {MatBadgeModule} from '@angular/material/badge';
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
+    TotalComponent,
+    InvoiceComponent,
+    FinalComponent,
 
   ],
   imports: [
@@ -47,6 +54,7 @@ import {MatBadgeModule} from '@angular/material/badge';
       { path: 'products/:productId', component: ProductDetailsComponent }, // it'll show this if clicked
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
+      { path: 'invoice', component: InvoiceComponent }
     ])
   ],
   providers: [],
