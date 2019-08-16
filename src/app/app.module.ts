@@ -35,8 +35,10 @@ import { ShippingComponent } from './shipping/shipping.component';
       { path: 'products/:productId', component: ProductDetailsComponent }, //it'll show this if clicked
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
-    ])
+    ]),
+    HttpClientModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
